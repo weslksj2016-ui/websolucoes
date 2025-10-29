@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Web Soluções e Serviços</title>
+  <meta name="description" content="Web Soluções e Serviços - soluções em agendamentos, Detrans, inscrições e suporte." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724;--card:#0b1220;--muted:#94a3b8;--accent:#06b6d4;--glass:rgba(255,255,255,0.03);--radius:14px;--max-width:1100px;color-scheme:dark;
+    }
+    *{box-sizing:border-box;scroll-behavior:smooth;}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;background:linear-gradient(180deg,#071026 0%, #071827 100%);color:#e6eef6;overflow-x:hidden;}
+    a{color:inherit;text-decoration:none;cursor:pointer}
+    .container{width:calc(100% - 2rem);max-width:var(--max-width);margin:0 auto}
+    header{position:sticky;top:12px;z-index:40}
+    .navwrap{display:flex;align-items:center;justify-content:space-between;padding:12px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));backdrop-filter:blur(6px)}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{height:48px;width:48px;border-radius:10px;overflow:hidden;transition:transform .3s ease, box-shadow .3s ease;}
+    .logo:hover{transform:scale(1.08);box-shadow:0 0 10px var(--accent);}
+    .logo img{width:100%;height:100%;object-fit:cover}
+    .brand h1{font-size:1rem;margin:0}
+    nav ul{display:flex;gap:12px;align-items:center;list-style:none;margin:0;padding:0}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:10px;background:var(--glass);border:1px solid rgba(255,255,255,0.04);cursor:pointer;text-align:center;justify-content:center;transition:all .3s ease}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),#8b5cf6);color:#031026;font-weight:600}
+    .btn:hover{transform:translateY(-2px);}
+    .menu-toggle{display:none}
+    @media(max-width:880px){
+      .navwrap{flex-wrap:wrap;}
+      nav ul{display:none;flex-direction:column;width:100%;margin-top:10px;background:rgba(0,0,0,0.3);border-radius:10px;padding:10px;}
+      nav ul.active{display:flex;}
+      .menu-toggle{display:inline-flex;}
+    }
+    .hero{display:flex;flex-wrap:wrap;gap:28px;align-items:center;padding:36px 0;text-align:center;justify-content:center}
+    .hero .left{flex:1;min-width:280px}
+    .hero h2{font-size:clamp(1.4rem,2.8vw,2.4rem);margin:0 0 12px}
+    .lead{color:var(--muted);margin:0 0 18px}
+    section{padding:28px 0;scroll-margin-top:100px;transition:background-color .5s ease;}
+    section.active{background-color:rgba(255,255,255,0.03);}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+    .card{background:var(--card);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);display:flex;flex-direction:column;justify-content:space-between;text-align:left}
+    .card h3{margin:0 0 8px}
+    footer{padding:24px 0;border-top:1px solid rgba(255,255,255,0.02);color:var(--muted);text-align:center}
+    .stars{color:#facc15;font-size:1.2rem}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="navwrap">
+        <div class="brand">
+          <div class="logo"><img src="https://imgur.com/xlGpJC7.png" alt="Logo Wesley Tech" /></div>
+          <div>
+            <h1>Web Soluções e Serviços</h1>
+            <div class="muted" style="font-size:.85rem">Soluções rápidas e confiáveis</div>
+          </div>
+        </div>
+        <nav>
+          <button class="menu-toggle btn" id="menuBtn" aria-expanded="false">☰</button>
+          <ul id="navList">
+            <li><a class="btn" href="#servicos">Serviços</a></li>
+            <li><a class="btn" href="#sobre">Sobre</a></li>
+            <li><a class="btn" href="#avaliacoes">Avaliações</a></li>
+            <li><a class="btn primary" href="https://wa.me/5587981586488" target="_blank">WhatsApp</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="left">
+          <h2>Web Soluções e Serviços — soluções digitais, agendamentos e suporte.</h2>
+          <p class="lead">Atendimento profissional e prático. Clique abaixo e fale direto pelo WhatsApp!</p>
+          <div class="cta-row">
+            <a class="btn primary" href="https://wa.me/5587981586488" target="_blank">Entre em contato</a>
+            <a class="btn" href="#servicos">Ver serviços</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="servicos">
+        <h2 style="text-align:center">Serviços</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Detrans</h3>
+            <p class="muted">Agendamentos, emissão de boletos, renovação de CNH, transferência de CNH e veículos, emissão de ATPV e muito mais.</p>
+            <a class="btn primary" href="https://wa.me/5587981586488?text=Olá%20Wesley!%20Gostaria%20de%20ajuda%20com%20serviços%20do%20Detran." target="_blank">Falar sobre Detran</a>
+          </article>
+          <article class="card">
+            <h3>Agendamentos</h3>
+            <p class="muted"> Agendamento de Identidade (RG), vagas com facilidade e diversos outros agendamentos.</p>
+            <a class="btn primary" href="https://wa.me/5587981586488?text=Olá%20Wesley!%20Preciso%20de%20ajuda%20com%20agendamentos." target="_blank">Falar sobre Agendamentos</a>
+          </article>
+          <article class="card">
+            <h3>Inscrições</h3>
+            <p class="muted">Inscrições de concursos, matrículas e muito mais.</p>
+            <a class="btn primary" href="https://wa.me/5587981586488?text=Olá%20Wesley!%20Quero%20ajuda%20com%20inscrições." target="_blank">Falar sobre Inscrições</a>
+          </article>
+          <article class="card">
+            <h3>Design / Sites Simples</h3>
+            <p class="muted">Criação de artes, topo de bolo e materiais para impressão, sites simples para seu négocio.</p>
+            <a class="btn primary" href="https://wa.me/5587981586488?text=Olá%20Wesley!%20Quero%20criar%20artes%20ou%20materiais%20gráficos." target="_blank">Falar sobre Design</a>
+          </article>
+          <article class="card">
+            <h3>Serviços de INSS</h3>
+            <p class="muted">Entrada em benefícios, extratos e muito mais.</p>
+            <a class="btn primary" href="https://wa.me/5587981586488?text=Olá%20Wesley!%20Preciso%20de%20ajuda%20com%20serviços%20do%20INSS." target="_blank">Falar sobre INSS</a>
+          </article>
+          <article class="card">
+            <h3>Suporte & Manutenção</h3>
+            <p class="muted">Suporte para computadores e algumas impressoras.</p>
+            <a class="btn primary" href="https://wa.me/5587981586488?text=Olá%20Wesley!%20Preciso%20de%20suporte%20ou%20manutenção%20técnica." target="_blank">Falar sobre Suporte</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="sobre">
+        <h2 style="text-align:center">Sobre Mim</h2>
+        <p class="muted" style="text-align:center;max-width:700px;margin:0 auto">Meu nome é Wesley, sou especialista em tecnologia e atendimento. Trabalho há mais de 9 anos com computadores, informática, atendimento ao público e soluções de problemas na internet, como agendamentos, inscrições e muito mais. Meu objetivo é facilitar a vida das pessoas através da tecnologia e oferecer sempre o melhor suporte e atendimento.</p>
+      </section>
+
+      <section id="avaliacoes">
+        <h2 style="text-align:center">Avaliações</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Maria Silva</h3>
+            <div class="stars">★★★★★</div>
+            <p class="muted">Excelente atendimento! Rápido, atencioso e resolveu tudo pelo WhatsApp.</p>
+          </article>
+          <article class="card">
+            <h3>João Pereira</h3>
+            <div class="stars">★★★★★</div>
+            <p class="muted">Serviço confiável e prático. Recomendo muito o Wesley!</p>
+          </article>
+          <article class="card">
+            <h3>Ana Souza</h3>
+            <div class="stars">★★★★☆</div>
+            <p class="muted">Muito bom atendimento, resolveu meu problema com rapidez!</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contato">
+        <h2 style="text-align:center">Contato</h2>
+        <p class="muted" style="text-align:center">Clique abaixo e fale comigo diretamente pelo WhatsApp.</p>
+        <div style="display:flex;justify-content:center;margin-top:12px">
+          <a class="btn primary" href="https://wa.me/5587981586488" target="_blank">Conversar no WhatsApp</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> Web Soluções Serviços — Todos os direitos reservados.<br>Atendimento via WhatsApp: (87) 98158-6488</div>
+    </footer>
+  </div>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const menuBtn=document.getElementById('menuBtn');
+    const navList=document.getElementById('navList');
+    menuBtn.addEventListener('click',()=>{navList.classList.toggle('active');});
+
+    // Nova rolagem suave com scrollIntoView
+    document.querySelectorAll('a[href^="#"]').forEach(link=>{
+      link.addEventListener('click',function(e){
+        const href=this.getAttribute('href');
+        if(href && href.startsWith('#') && href.length>1){
+          e.preventDefault();
+          const target=document.querySelector(href);
+          if(target){
+            target.scrollIntoView({behavior:'smooth', block:'start'});
+          }
+        }
+        if(navList.classList.contains('active')){navList.classList.remove('active');}
+      });
+    });
+
+    // Destaque da seção ativa
+    const sections=document.querySelectorAll('section');
+    window.addEventListener('scroll',()=>{
+      let current='';
+      sections.forEach(section=>{
+        const sectionTop=section.offsetTop-100;
+        if(scrollY>=sectionTop){current=section.id;}
+      });
+      sections.forEach(section=>{
+        section.classList.remove('active');
+        if(section.id===current){section.classList.add('active');}
+      });
+    });
+  </script>
+</body>
+</html>
